@@ -1,18 +1,25 @@
+import math
 class Solution:
+    def numberOfLines1(self, widths, S):
+        """
+        :type widths: List[int]
+        :type S: str
+        :rtype: List[int]
+        """
+        count = 0
+        for i in S:
+            if count % 100 + widths[ord(i) - 97] > 100:
+                count = math.ceil(count / 100) * 100 + widths[ord(i) - 97]
+            else:
+                count += widths[ord(i) - 97]
+        return [math.ceil(count / 100), count % 100]
+
     def numberOfLines(self, widths, S):
         """
         :type widths: List[int]
         :type S: str
         :rtype: List[int]
         """
-        # count = 0
-        # for i in S:
-        #     if count % 100 + widths[ord(i) - 97] > 100:
-        #         count = math.ceil(count / 100) * 100 + widths[ord(i) - 97]
-        #     else:
-        #         count += widths[ord(i) - 97]
-        # return [math.ceil(count / 100), count % 100]
-
         lines = 1
         linewidth = 0
         ord_a = ord('a')
