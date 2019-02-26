@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/2/25 11:46
+# @Author  : xulzee
+# @Email   : xulzee@163.com
+# @File    : 118.pascals-triangle.py
+# @Software: PyCharm
+
+
 class Solution:
     def generate(self, numRows):
         """

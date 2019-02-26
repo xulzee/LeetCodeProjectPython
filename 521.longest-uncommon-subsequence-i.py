@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/2/25 11:46
+# @Author  : xulzee
+# @Email   : xulzee@163.com
+# @File    : 521.longest-uncommon-subsequence-i.py
+# @Software: PyCharm
+
+
 class Solution:
     def findLUSlength(self, a, b):
         """

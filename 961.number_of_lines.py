@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/2/25 11:46
+# @Author  : xulzee
+# @Email   : xulzee@163.com
+# @File    : 961.number_of_lines.py
+# @Software: PyCharm
+
+
 import math
 class Solution:
     def numberOfLines1(self, widths, S):

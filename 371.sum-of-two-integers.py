@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/2/25 11:46
+# @Author  : xulzee
+# @Email   : xulzee@163.com
+# @File    : 371.sum-of-two-integers.py
+# @Software: PyCharm
+
 class Solution:
     def getSum(self, a, b):
         """
