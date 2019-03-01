@@ -22,7 +22,7 @@ class Solution:
         return next_list
 
     def strStr(self, haystack: str, needle: str) -> int:
-        next_list = self.get_next(haystack)
+        next_list = self.get_next(needle)
         j = 0
         i = 0
         while i < len(haystack) and j < len(needle):
@@ -58,6 +58,6 @@ class Solution:
         return -1
 
 if __name__ == '__main__':
-    haystack = "mississippi"
+    haystack = "ababc"
     needle = "issip"
     print(Solution().strStr(haystack, needle))
