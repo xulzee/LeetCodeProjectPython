@@ -2,7 +2,7 @@
 # @Time    : 2019/3/14 12:49
 # @Author  : xulzee
 # @Email   : xulzee@163.com
-# @File    : max gap.py
+# @File    : Max Gap.py
 # @Software: PyCharm
 
 # 给定一个数组，求如果排序之后，相邻两数的最大差值，要求时
@@ -37,16 +37,18 @@ class Solution:
         res = 0
         lastMax = maxs[0]
         for k in range(1, array_len):
-            if hasNum[k]==1:
+            if hasNum[k] == 1:
                 res = max(res, mins[k] - lastMax)
                 lastMax = maxs[k]
         return res
 
     def bucket(self, num: int, len: int, min: int, max: int):
-        return (num - min) * len // (max - min) # 思考
+        return (num - min) * len // (max - min)  # 思考
+
 
 if __name__ == '__main__':
     import random
+
     test = [random.randint(0, 500) for j in range(10)]
     print(sorted(test))
     print(Solution().maxgap(test))
