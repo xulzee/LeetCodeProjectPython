@@ -39,6 +39,5 @@ def index_kmp(s: 'str', t: 'str'):
 
 
 if __name__ == '__main__':
-    s, t = 'qwewacdabcasd','abc'
+    s, t = 'qwewacdabcasd', 'abc'
     print(index_kmp(s, t))
-
