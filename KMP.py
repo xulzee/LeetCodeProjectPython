@@ -19,7 +19,6 @@ def get_next(s: 'str'):
                 next_list[i] = j
         else:
             j = next_list[j]
-    print(next_list)
     return next_list
 
 
@@ -35,9 +34,46 @@ def index_kmp(s: 'str', t: 'str'):
     if j >= len(t):
         return i - len(t)
     else:
-        return 0
+        return -1
+
+
+def isPalindrome(s):
+    if not len(s):
+        return True
+    s = "".join(filter(str.isalnum, s)).lower()
+    return s == s[::-1]
 
 
 if __name__ == '__main__':
-    s, t = 'qwewacdabcasd', 'abc'
-    print(index_kmp(s, t))
+    s = input()
+    if len(s) % 2 != 0:
+        print(len(s))
+    else:
+        slow = 0
+        fast = len(s) // 2
+        while fast < len(s):
+            if s[fast] != s[slow]:
+                break
+            fast += 1
+            slow += 1
+        if fast < len(s) - 1:
+            print(len(s))
+        else:
+            print(len(s) // 2)
+    # s = input()
+    # t = input()
+    # n = int(input())
+    # for i in range(n):
+    #     str_in = input().split()
+    #     left, right = int(str_in[0]) - 1, int(str_in[1])
+    #     count = 0
+    #     temp = s[left:right]
+    #     while (True):
+    #         ret = index_kmp(temp, t)
+    #         if ret != -1:
+    #             count += 1
+    #             left = ret + len(t)
+    #             temp = temp[left:]
+    #         else:
+    #             break
+    #     print(count)
